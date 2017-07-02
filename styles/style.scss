@@ -1,0 +1,271 @@
+// Mixins
+  @mixin typog ($size) {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: $size;
+  }
+  @mixin link ($color, $weight, $padding) {
+    padding-left: 18px;
+    text-decoration: none;
+    color: $color;
+    font-weight: $weight;
+    transition: all 0.2s;
+    &:hover {
+      color: #ef5350;
+      transition: all 0.2s;
+    }
+  }
+  @mixin nav {
+    display: flex;
+    text-align: right;
+    float: right;
+  }
+
+  @mixin eyecatch ($color, $weight){
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: $color;
+    font-weight: $weight;
+  }
+// Base
+  // layout.css
+  // typography.css
+      p {
+        @include typog(17.5px);
+        font-weight: 300;
+      }
+
+// Modules
+  // aside.css
+      #main {
+        .project_content {
+          @media screen and(max-width: 1000px) {
+            text-align: center;
+          }
+        }
+        .container{
+          h2 {
+            @include eyecatch (black, 200);
+            padding: 30px 0 20px 0;
+            font-size: 50px;
+          }
+          .project, .youtube {
+            margin-top: 25px;
+            @media screen and (max-width: 1000px) {
+              text-align: center;
+            }
+          }
+          .project_thumbnail {
+            background-color: #F5F5F5;
+            width: 260px;
+            height: 200px;
+            margin: 0 auto;
+            img {
+              width: 260px;
+              margin-top: 50px;
+              text-align: center;
+              transition: all 0.5s;
+              &:hover {
+                margin-top: 52px;
+                opacity: 0.8;
+                transition: all 0.2s;
+              }
+            }
+          }
+          .youtube_thumbnail {
+	          background-color: #000;
+	          margin-bottom: 30px;
+	          position: relative;
+	          padding-top: 56.25%;
+	          overflow: hidden;
+	          cursor: pointer;
+            img {
+            	width: 100%;
+            	top: -16.82%;
+            	left: 0;
+            	opacity: 0.7;
+            }
+            .play-button {
+            	width: 90px;
+            	height: 60px;
+            	background-color: #ef5350;
+            	box-shadow: 0 0 30px rgba( 0,0,0,0.6 );
+            	z-index: 1;
+            	opacity: 0.7;
+            	border-radius: 10px;
+            }
+            .play-button:before {
+            	content: "";
+            	border-style: solid;
+            	border-width: 15px 0 15px 26.0px;
+            	border-color: transparent transparent transparent #fff;
+            }
+            .img,
+            .play-button {
+            	cursor: pointer;
+            }
+            img,
+            iframe,
+            .play-button,
+            .play-button:before {
+            	position: absolute;
+            }
+            .play-button,
+            .play-button:before {
+            	top: 50%;
+            	left: 50%;
+            	transform: translate3d( -50%, -50%, 0 );
+            }
+            iframe {
+            	height: 100%;
+            	width: 100%;
+            	top: 0;
+            	left: 0;
+            }
+          }
+          .project_footer, .youtube_footer {
+            padding-bottom: 20px;
+            text-align: left;
+            @media screen and (max-width: 1000px) {
+              margin: 0 auto;
+            }
+          }
+          .project_footer{
+            width: 260px;
+          }
+          .youtube_footer{
+            width: 300px;
+          }
+          a, h4 {
+            @include typog(1.5rem);
+            @include eyecatch(black, 800);
+            transition: all 0.2s;
+            &:hover {
+              color: #ef5350;
+              transition: all 0.2s;
+            }
+          }
+          .call_to_action {
+            color: #ef5350;
+          }
+          .blog {
+            text-align: center;
+            background: #212121;
+            margin-top: 50px;
+            .container {
+              padding: 50px 0;
+              width: inherit;
+              h1 {
+                @include typog(1.925rem);
+                @include eyecatch(white, 800);
+                margin-top: 0;
+              }
+              h4 {
+                color: white;
+              }
+              button {
+                border: 1px solid white;
+                padding: 8px 30px;
+                background-color: #212121;
+                margin-top: 5px;
+                transition: all 0.2s;
+                &:hover {
+                  background-color: #ffffff;
+                  transition: all 0.2s;
+                  a {
+                    color: #212121;
+                    transition: all 0.2s;
+                  }
+                }
+                a {
+                  color: white;
+                  font-size: 12px;
+                  text-decoration: none;
+                  transition: all 0.2s;
+                }
+              }
+            }
+          }
+        }
+      }
+  // footer.css
+      #footer {
+          background-color: #212121;
+          margin-top: 75px;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .container {
+            .row {
+              height: inherit;
+              width: 100%;
+            }
+          }
+          a {
+            @include typog(14px);
+            letter-spacing: 0.2px;
+            vertical-align: top;
+          }
+          a, p {
+            @include link(white, 400, 0px);
+            text-align: center;
+          }
+          p {
+            @include typog(14px);
+            @media screen and (max-width: 600px) {
+              padding-bottom: 5px;
+            }
+          }
+          nav {
+            text-align: center;
+            .email {
+              @media screen and (max-width: 600px) {
+                display: none;
+              }
+            }
+          }
+      }
+  // header.css
+      #header {
+        @media screen and (min-width: 800px) {
+          margin-top: 20px;
+        }
+        .fa-bars {
+          float: right;
+          margin-top: 25px;
+          &:active {
+            nav {
+              display: block;
+            }
+          }
+          @media screen and (min-width: 600px) {
+            display: none;
+          }
+        }
+        h1 {
+          @include typog(3rem);
+          @include eyecatch(black, 800);
+        }
+        nav {
+          margin-top: 20px;
+          @include nav;
+          a {
+            @include typog(17.5px);
+            @include link(black, 200, 18px);
+          }
+          @media screen and (max-width: 600px) {
+            display: none;
+            width: 100px;
+            a {
+              padding: 10px;
+            }
+          }
+        }
+      }
+
+      .show {
+        display: block;
+      }
+      .hide {
+        display: block;
+      }

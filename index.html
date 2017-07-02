@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Travis Sanon | Front-End Developer</title>
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-7"><h1>Travis Sanon</h1></div>
+          <div class="col-xs-5">
+            <i class="fa fa-bars" aria-hidden="true" onclick="toggle()"></i>
+            <nav id="nav" class="show">
+              <a href="/">Home</a>
+              <a href="#projects">Projects</a>
+              <a href="#youtube">Youtube</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <section id="section">
+        <div class="container">
+          <h2>
+            Developer, Instructor,
+            <br>
+            & Finesser of your repos.
+          </h2>
+          <div class="row">
+            <div class="col-md-5">
+              <p>I am a developer with an eye for configuration. I am always trying to figure out how things work. From computers to sprinklers, I'm always at ease after discovering how a particular thing works. I’m a fan of web dev because it requires that trait along with others like creativity and problem solving.</p>
+            </div>
+            <div class="col-md-5">
+              <p>I have a year and some change of web experience and solid understanding of Javascript, HTML5, CSS/Sass, and jQuery. I also have some knowledge about Node.js and Express. I enjoy building everything from small business sites to rich interactive web apps.</p>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="container">
+              <h1>Take a look at my</h1>
+              <button type="button" name="blog_button">
+                <a href="http://www.devmaterial.co/" target="blank">BLOG</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="container project_content">
+          <h2>Projects</h2>
+          <a class="call_to_action" href="https://github.com/DevMaterial" target="blank">Take a look at my Github profile.</a>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <figure class="project">
+                <div class="project_thumbnail">
+                  <a href="https://hike-dev.herokuapp.com/index" target="_blank">
+                    <img src="images/mb-hike.png" alt="hike"></img>
+                  </a>
+                </div>
+                <figcaption class="project_footer">
+                  <h4>Hike</h4>
+                  <p>A hiking themed website that uses JSON to display data and Node for page routing/rendering.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <figure class="project">
+                <div class="project_thumbnail">
+                  <a href="https://devmaterial.github.io/math-game/" target="_blank">
+                    <img src="images/mb-math.png" alt="hike"></img>
+                  </a>
+                </div>
+                <figcaption class="project_footer">
+                  <h4>Math Game</h4>
+                  <p>Generates 10 random math questions which a user needs to solve each in under 5 seconds.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <figure class="project">
+                <div class="project_thumbnail">
+                  <a href="https://hike-dev.herokuapp.com/index" target="_blank">
+                    <img src="images/mb-weather.png" alt="hike"></img>
+                  </a>
+                </div>
+                <figcaption class="project_footer">
+                  <h4>Weather App</h4>
+                  <p>Uses the open weather map api and ip-api to display the weather in the user's area.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <figure class="project">
+                <div class="project_thumbnail">
+                  <a href="https://codepen.io/DevMaterial/pen/OXbYgb" target="_blank">
+                    <img src="images/mb-etch.png" alt="hike"></img>
+                  </a>
+                </div>
+                <figcaption class="project_footer">
+                  <h4>Etch-A-Sketch</h4>
+                  <p>A program that utilizes jQuery's DOM manipulation to imitate the functionality of an Etch-a-Sketch.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="youtube">
+        <div class="container project_content">
+          <h2>Youtube</h2>
+          <a class="call_to_action" href="https://www.youtube.com/channel/UClE-pN-OOQrRUwi6HFHmDpA" target="blank">Check out my Youtube channel.</a>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <figure class="youtube">
+                <div class="youtube_thumbnail" data-embed="_eJGXOSvcXA">
+                  <div class="play-button"></div>
+                </div>
+                <figcaption class="youtube_footer">
+                  <h4>Let's make a Quote Generator with jQuery</h4>
+                  <p>A (reasonably) short guide on how to create a quote generator.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <figure class="youtube">
+                <div class="youtube_thumbnail" data-embed="Y2bLPOviyaw">
+                  <div class="play-button"></div>
+                </div>
+                <figcaption class="youtube_footer">
+                  <h4>Let's make a clock with Javascript</h4>
+                  <p>Lets look at the process of creating a digital clock with Javascript.</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+              <figure class="youtube">
+                <div class="youtube_thumbnail" data-embed="xHcIId_e_W0">
+                  <div class="play-button"></div>
+                </div>
+                <figcaption class="youtube_footer">
+                  <h4>Website Speed Sketch</h4>
+                  <p>Syrebral: A Photographer's Website</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="blog">
+            <div class="container">
+              <button type="button" name="blog_button">
+                <a href="mailto:developer.material@gmail.com" target="_top">CONTACT ME</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <p>handmade by me ©2017</p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <nav>
+              <a class="email" href="mailto:developer.material@gmail.com">developer.material@gmail.com</a>
+              <a class="icon" href="https://github.com/DevMaterial" target="blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+              <a class="icon" href="https://twitter.com/DevMaterial" target="blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a class="icon" href="https://www.youtube.com/channel/UClE-pN-OOQrRUwi6HFHmDpA" target="blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a class="icon" href="https://www.linkedin.com/in/travis-sanon-120b6099" target="blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
