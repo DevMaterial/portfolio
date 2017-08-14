@@ -174,11 +174,6 @@ p {
     @media screen and (max-width: 600px) {
       #footer p {
         padding-bottom: 5px; } }
-  #footer nav {
-    text-align: center; }
-    @media screen and (max-width: 600px) {
-      #footer nav .email {
-        display: none; } }
 
 @media screen and (min-width: 800px) {
   #header {
@@ -201,12 +196,12 @@ p {
   color: black;
   font-weight: 800; }
 
-#header nav {
+#header #nav {
   margin-top: 20px;
   display: flex;
   text-align: right;
   float: right; }
-  #header nav a {
+  #header #nav a {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 17.5px;
     padding-left: 18px;
@@ -214,18 +209,18 @@ p {
     color: black;
     font-weight: 200;
     transition: all 0.2s; }
-    #header nav a:hover {
+    #header #nav a:hover {
       color: #ef5350;
       transition: all 0.2s; }
-  @media screen and (max-width: 600px) {
-    #header nav {
+  @media screen and (max-width: 599px) {
+    #header #nav {
       display: none;
-      width: 100px; }
-      #header nav a {
+      width: 80px; }
+      #header #nav a {
         padding: 10px; } }
 
 .show {
   display: block; }
 
 .hide {
-  display: block; }
+  display: none; }

@@ -3,6 +3,7 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: $size;
   }
+
   @mixin link ($color, $weight, $padding) {
     padding-left: 18px;
     text-decoration: none;
@@ -216,14 +217,14 @@
               padding-bottom: 5px;
             }
           }
-          nav {
-            text-align: center;
-            .email {
-              @media screen and (max-width: 600px) {
-                display: none;
-              }
-            }
-          }
+          // nav {
+          //   text-align: center;
+          //   .email {
+          //     @media screen and (max-width: 600px) {
+          //       display: none;
+          //     }
+          //   }
+          // }
       }
   // header.css
       #header {
@@ -246,16 +247,16 @@
           @include typog(3rem);
           @include eyecatch(black, 800);
         }
-        nav {
+        #nav {
           margin-top: 20px;
           @include nav;
           a {
             @include typog(17.5px);
             @include link(black, 200, 18px);
           }
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 599px) {
             display: none;
-            width: 100px;
+            width: 80px;
             a {
               padding: 10px;
             }
@@ -267,5 +268,5 @@
         display: block;
       }
       .hide {
-        display: block;
+        display: none;
       }
